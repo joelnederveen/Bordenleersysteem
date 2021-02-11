@@ -1,14 +1,25 @@
-console.log('test js');
+var names = ['bert', 'chantal', 'freek', 'gert', 'hanneke', 'hans', 'irma', 'karen', 'kees', 'lidia'];
 
-var names = ['bert', 'chantal', 'freek'];
+var correctNumber = Math.floor(Math.random() * 11);
 
-names.forEach(showNames)
+console.log('correct name: '+names[correctNumber]);
 
-function showNames(item) {
-    document.getElementById('namecol').innerHTML += 'Name:' + '<br>';
-    document.getElementById('itemcol').innerHTML += item  + '<br>';
+var correctName = names[correctNumber];
 
+console.log(correctName);
+
+showImage(correctName);
+
+
+function showImage(image) {
     var img = document.createElement('img');
-    img.src = 'Documents/Bordenleersysteem//Images/'+item+'.jfif';
+    img.src = 'Images/'+image+'.jfif';
+    img.width = 500;
+    img.height = 500;
     document.getElementById('images').appendChild(img);
 }
+
+// function showImage(item) {
+//     // document.getElementById('namecol').innerHTML += 'Name:' + '<br>';
+//     // document.getElementById('itemcol').innerHTML += item  + '<br>';
+// }
